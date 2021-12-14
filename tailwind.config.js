@@ -1,8 +1,18 @@
+const { gray } = require('tailwindcss/colors')
+const colors = require('tailwindcss/colors')
+
 module.exports = {
-  purge: [],
+  mode: 'jit',
+  purge: ['./src/**/*.{js,jsx,ts,tsx}','./public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#202225',
+        secondary: '#5865f2',
+        gray: colors.coolGray
+      }
+    },
   },
   variants: {
     extend: {},
